@@ -1,0 +1,700 @@
+﻿2025-08-14T16:06:41.8247382Z ##[debug]Starting: deploy
+2025-08-14T16:06:41.8281658Z ##[debug]Cleaning runner temp folder: /home/runner/work/_temp
+2025-08-14T16:06:41.8443181Z ##[debug]Starting: Set up job
+2025-08-14T16:06:41.8444908Z Current runner version: '2.327.1'
+2025-08-14T16:06:41.8477724Z ##[group]Runner Image Provisioner
+2025-08-14T16:06:41.8478898Z Hosted Compute Agent
+2025-08-14T16:06:41.8480182Z Version: 20250812.370
+2025-08-14T16:06:41.8481253Z Commit: 4a2b2bf7520004e3e907c2150c8cabe342a3da32
+2025-08-14T16:06:41.8482729Z Build Date: 2025-08-12T16:08:14Z
+2025-08-14T16:06:41.8483680Z ##[endgroup]
+2025-08-14T16:06:41.8484544Z ##[group]Operating System
+2025-08-14T16:06:41.8485375Z Ubuntu
+2025-08-14T16:06:41.8486328Z 24.04.2
+2025-08-14T16:06:41.8487046Z LTS
+2025-08-14T16:06:41.8487902Z ##[endgroup]
+2025-08-14T16:06:41.8488644Z ##[group]Runner Image
+2025-08-14T16:06:41.8490050Z Image: ubuntu-24.04
+2025-08-14T16:06:41.8491100Z Version: 20250804.2.0
+2025-08-14T16:06:41.8492795Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250804.2/images/ubuntu/Ubuntu2404-Readme.md
+2025-08-14T16:06:41.8495735Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250804.2
+2025-08-14T16:06:41.8497211Z ##[endgroup]
+2025-08-14T16:06:41.8499281Z ##[group]GITHUB_TOKEN Permissions
+2025-08-14T16:06:41.8502016Z Contents: read
+2025-08-14T16:06:41.8503046Z Metadata: read
+2025-08-14T16:06:41.8503846Z Pages: write
+2025-08-14T16:06:41.8504636Z ##[endgroup]
+2025-08-14T16:06:41.8509550Z Secret source: Actions
+2025-08-14T16:06:41.8511585Z ##[debug]Primary repository: trad-alrowais/my-arabic-blog
+2025-08-14T16:06:41.8512953Z Prepare workflow directory
+2025-08-14T16:06:41.8616568Z ##[debug]Creating pipeline directory: '/home/runner/work/my-arabic-blog'
+2025-08-14T16:06:41.8622571Z ##[debug]Creating workspace directory: '/home/runner/work/my-arabic-blog/my-arabic-blog'
+2025-08-14T16:06:41.8625513Z ##[debug]Update context data
+2025-08-14T16:06:41.8631429Z ##[debug]Evaluating job-level environment variables
+2025-08-14T16:06:41.8967692Z ##[debug]Evaluating job container
+2025-08-14T16:06:41.8972416Z ##[debug]Evaluating job service containers
+2025-08-14T16:06:41.8976167Z ##[debug]Evaluating job defaults
+2025-08-14T16:06:41.9016017Z Prepare all required actions
+2025-08-14T16:06:41.9074568Z Getting action download info
+2025-08-14T16:06:42.2400058Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+2025-08-14T16:06:42.4820776Z ##[debug]Download 'https://api.github.com/repos/actions/checkout/tarball/08eba0b27e820071cde6df949e0beb9ba4906955' to '/home/runner/work/_actions/_temp_5a22086c-f9d0-4782-a913-5f3f40ad0a98/d86e8b2c-a043-4525-8f2b-36ab275f22a6.tar.gz'
+2025-08-14T16:06:42.5389027Z ##[debug]Unwrap 'actions-checkout-08eba0b' to '/home/runner/work/_actions/actions/checkout/v4'
+2025-08-14T16:06:42.5516278Z ##[debug]Archive '/home/runner/work/_actions/_temp_5a22086c-f9d0-4782-a913-5f3f40ad0a98/d86e8b2c-a043-4525-8f2b-36ab275f22a6.tar.gz' has been unzipped into '/home/runner/work/_actions/actions/checkout/v4'.
+2025-08-14T16:06:42.5614208Z Download action repository 'actions/configure-pages@v5' (SHA:983d7736d9b0ae728b81ab479565c72886d7745b)
+2025-08-14T16:06:42.8133303Z ##[debug]Download 'https://api.github.com/repos/actions/configure-pages/tarball/983d7736d9b0ae728b81ab479565c72886d7745b' to '/home/runner/work/_actions/_temp_d1e8f636-5c7e-43d0-9763-b2721d8493b2/b6976306-3d65-4d1e-b5a9-67ef41b32350.tar.gz'
+2025-08-14T16:06:42.8419013Z ##[debug]Unwrap 'actions-configure-pages-983d773' to '/home/runner/work/_actions/actions/configure-pages/v5'
+2025-08-14T16:06:42.8526643Z ##[debug]Archive '/home/runner/work/_actions/_temp_d1e8f636-5c7e-43d0-9763-b2721d8493b2/b6976306-3d65-4d1e-b5a9-67ef41b32350.tar.gz' has been unzipped into '/home/runner/work/_actions/actions/configure-pages/v5'.
+2025-08-14T16:06:42.8560588Z Download action repository 'actions/upload-pages-artifact@v3' (SHA:56afc609e74202658d3ffba0e8f6dda462b719fa)
+2025-08-14T16:06:43.0324282Z ##[debug]Download 'https://api.github.com/repos/actions/upload-pages-artifact/tarball/56afc609e74202658d3ffba0e8f6dda462b719fa' to '/home/runner/work/_actions/_temp_9957898f-e5fd-4910-ba8f-2aa580357296/ff82b87e-90b9-4e6e-b05e-3a18cfd7dd4e.tar.gz'
+2025-08-14T16:06:43.0411156Z ##[debug]Unwrap 'actions-upload-pages-artifact-56afc60' to '/home/runner/work/_actions/actions/upload-pages-artifact/v3'
+2025-08-14T16:06:43.0430960Z ##[debug]Archive '/home/runner/work/_actions/_temp_9957898f-e5fd-4910-ba8f-2aa580357296/ff82b87e-90b9-4e6e-b05e-3a18cfd7dd4e.tar.gz' has been unzipped into '/home/runner/work/_actions/actions/upload-pages-artifact/v3'.
+2025-08-14T16:06:43.0450077Z Download action repository 'actions/deploy-pages@v4' (SHA:d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e)
+2025-08-14T16:06:43.3045210Z ##[debug]Download 'https://api.github.com/repos/actions/deploy-pages/tarball/d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e' to '/home/runner/work/_actions/_temp_86b376b8-477b-4142-b795-280b0ee7dce9/cae404f0-0588-4764-a988-c72dc05f5b8c.tar.gz'
+2025-08-14T16:06:43.3768099Z ##[debug]Unwrap 'actions-deploy-pages-d6db901' to '/home/runner/work/_actions/actions/deploy-pages/v4'
+2025-08-14T16:06:43.3911053Z ##[debug]Archive '/home/runner/work/_actions/_temp_86b376b8-477b-4142-b795-280b0ee7dce9/cae404f0-0588-4764-a988-c72dc05f5b8c.tar.gz' has been unzipped into '/home/runner/work/_actions/actions/deploy-pages/v4'.
+2025-08-14T16:06:43.3959360Z ##[debug]action.yml for action: '/home/runner/work/_actions/actions/checkout/v4/action.yml'.
+2025-08-14T16:06:43.4684742Z ##[debug]action.yml for action: '/home/runner/work/_actions/actions/configure-pages/v5/action.yml'.
+2025-08-14T16:06:43.4747921Z ##[debug]action.yml for action: '/home/runner/work/_actions/actions/upload-pages-artifact/v3/action.yml'.
+2025-08-14T16:06:43.4920137Z Getting action download info
+2025-08-14T16:06:43.6192363Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-08-14T16:06:43.6231206Z ##[debug]Copied action archive '/opt/actionarchivecache/actions_upload-artifact/ea165f8d65b6e75b540449e92b4886f43607fa02.tar.gz' to '/home/runner/work/_actions/_temp_18be43d6-8397-48d2-97cc-ba29b1c039a3/eba2ca29-3dc0-40bd-a6d1-1b7a612d0857.tar.gz'
+2025-08-14T16:06:43.6906791Z ##[debug]Unwrap 'actions-upload-artifact-ea165f8' to '/home/runner/work/_actions/actions/upload-artifact/v4'
+2025-08-14T16:06:43.7236612Z ##[debug]Archive '/home/runner/work/_actions/_temp_18be43d6-8397-48d2-97cc-ba29b1c039a3/eba2ca29-3dc0-40bd-a6d1-1b7a612d0857.tar.gz' has been unzipped into '/home/runner/work/_actions/actions/upload-artifact/v4'.
+2025-08-14T16:06:43.7290358Z ##[debug]action.yml for action: '/home/runner/work/_actions/actions/upload-artifact/v4/action.yml'.
+2025-08-14T16:06:43.7480808Z ##[debug]action.yml for action: '/home/runner/work/_actions/actions/deploy-pages/v4/action.yml'.
+2025-08-14T16:06:43.7612312Z ##[debug]Set step '__actions_checkout' display name to: 'Checkout'
+2025-08-14T16:06:43.7616463Z ##[debug]Set step '__actions_configure-pages' display name to: 'Setup Pages'
+2025-08-14T16:06:43.7619946Z ##[debug]Set step '__actions_upload-pages-artifact' display name to: 'Upload artifact'
+2025-08-14T16:06:43.7623196Z ##[debug]Set step 'deployment' display name to: 'Deploy to GitHub Pages'
+2025-08-14T16:06:43.7624700Z Complete job name: deploy
+2025-08-14T16:06:43.7660038Z ##[debug]Collect running processes for tracking orphan processes.
+2025-08-14T16:06:43.7881902Z ##[debug]Finishing: Set up job
+2025-08-14T16:06:43.8007181Z ##[debug]Evaluating condition for step: 'Checkout'
+2025-08-14T16:06:43.8060717Z ##[debug]Evaluating: success()
+2025-08-14T16:06:43.8068972Z ##[debug]Evaluating success:
+2025-08-14T16:06:43.8093682Z ##[debug]=> true
+2025-08-14T16:06:43.8104753Z ##[debug]Result: true
+2025-08-14T16:06:43.8134236Z ##[debug]Starting: Checkout
+2025-08-14T16:06:43.8227318Z ##[debug]Register post job cleanup for action: actions/checkout@v4
+2025-08-14T16:06:43.8332060Z ##[debug]Loading inputs
+2025-08-14T16:06:43.8345226Z ##[debug]Evaluating: github.repository
+2025-08-14T16:06:43.8347730Z ##[debug]Evaluating Index:
+2025-08-14T16:06:43.8352394Z ##[debug]..Evaluating github:
+2025-08-14T16:06:43.8354995Z ##[debug]..=> Object
+2025-08-14T16:06:43.8363949Z ##[debug]..Evaluating String:
+2025-08-14T16:06:43.8366039Z ##[debug]..=> 'repository'
+2025-08-14T16:06:43.8374097Z ##[debug]=> 'trad-alrowais/my-arabic-blog'
+2025-08-14T16:06:43.8377635Z ##[debug]Result: 'trad-alrowais/my-arabic-blog'
+2025-08-14T16:06:43.8385948Z ##[debug]Evaluating: github.token
+2025-08-14T16:06:43.8387650Z ##[debug]Evaluating Index:
+2025-08-14T16:06:43.8389522Z ##[debug]..Evaluating github:
+2025-08-14T16:06:43.8391096Z ##[debug]..=> Object
+2025-08-14T16:06:43.8392522Z ##[debug]..Evaluating String:
+2025-08-14T16:06:43.8394135Z ##[debug]..=> 'token'
+2025-08-14T16:06:43.8396405Z ##[debug]=> '***'
+2025-08-14T16:06:43.8398257Z ##[debug]Result: '***'
+2025-08-14T16:06:43.8429470Z ##[debug]Loading env
+2025-08-14T16:06:43.8508982Z ##[group]Run actions/checkout@v4
+2025-08-14T16:06:43.8510325Z with:
+2025-08-14T16:06:43.8511111Z   repository: trad-alrowais/my-arabic-blog
+2025-08-14T16:06:43.8512416Z   token: ***
+2025-08-14T16:06:43.8513161Z   ssh-strict: true
+2025-08-14T16:06:43.8513905Z   ssh-user: git
+2025-08-14T16:06:43.8514664Z   persist-credentials: true
+2025-08-14T16:06:43.8515514Z   clean: true
+2025-08-14T16:06:43.8516304Z   sparse-checkout-cone-mode: true
+2025-08-14T16:06:43.8517226Z   fetch-depth: 1
+2025-08-14T16:06:43.8517985Z   fetch-tags: false
+2025-08-14T16:06:43.8518761Z   show-progress: true
+2025-08-14T16:06:43.8519783Z   lfs: false
+2025-08-14T16:06:43.8520496Z   submodules: false
+2025-08-14T16:06:43.8521275Z   set-safe-directory: true
+2025-08-14T16:06:43.8522795Z ##[endgroup]
+2025-08-14T16:06:43.9566376Z ##[debug]GITHUB_WORKSPACE = '/home/runner/work/my-arabic-blog/my-arabic-blog'
+2025-08-14T16:06:43.9569955Z ##[debug]qualified repository = 'trad-alrowais/my-arabic-blog'
+2025-08-14T16:06:43.9572802Z ##[debug]ref = 'refs/heads/main'
+2025-08-14T16:06:43.9574773Z ##[debug]commit = '5e8ea350377ccb17f468fb52e4023468f8323cee'
+2025-08-14T16:06:43.9576453Z ##[debug]clean = true
+2025-08-14T16:06:43.9577711Z ##[debug]filter = undefined
+2025-08-14T16:06:43.9579210Z ##[debug]fetch depth = 1
+2025-08-14T16:06:43.9580591Z ##[debug]fetch tags = false
+2025-08-14T16:06:43.9581942Z ##[debug]show progress = true
+2025-08-14T16:06:43.9583302Z ##[debug]lfs = false
+2025-08-14T16:06:43.9584561Z ##[debug]submodules = false
+2025-08-14T16:06:43.9585955Z ##[debug]recursive submodules = false
+2025-08-14T16:06:43.9587391Z ##[debug]GitHub Host URL = 
+2025-08-14T16:06:43.9589799Z ::add-matcher::/home/runner/work/_actions/actions/checkout/v4/dist/problem-matcher.json
+2025-08-14T16:06:43.9673278Z ##[debug]Added matchers: 'checkout-git'. Problem matchers scan action output for known warning or error strings and report these inline.
+2025-08-14T16:06:43.9679970Z Syncing repository: trad-alrowais/my-arabic-blog
+2025-08-14T16:06:43.9682123Z ::group::Getting Git version info
+2025-08-14T16:06:43.9683765Z ##[group]Getting Git version info
+2025-08-14T16:06:43.9685998Z Working directory is '/home/runner/work/my-arabic-blog/my-arabic-blog'
+2025-08-14T16:06:43.9688653Z ##[debug]Getting git version
+2025-08-14T16:06:43.9690048Z [command]/usr/bin/git version
+2025-08-14T16:06:43.9691120Z git version 2.50.1
+2025-08-14T16:06:43.9708832Z ##[debug]0
+2025-08-14T16:06:43.9711258Z ##[debug]git version 2.50.1
+2025-08-14T16:06:43.9712681Z ##[debug]
+2025-08-14T16:06:43.9715836Z ##[debug]Set git useragent to: git/2.50.1 (github-actions-checkout)
+2025-08-14T16:06:43.9717828Z ::endgroup::
+2025-08-14T16:06:43.9718711Z ##[endgroup]
+2025-08-14T16:06:43.9724479Z ::add-mask::***
+2025-08-14T16:06:43.9735827Z Temporarily overriding HOME='/home/runner/work/_temp/5cae2e6c-5bc1-4ec8-909b-5f9429023d42' before making global git config changes
+2025-08-14T16:06:43.9738896Z Adding repository directory to the temporary git global config as a safe directory
+2025-08-14T16:06:43.9742496Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/my-arabic-blog/my-arabic-blog
+2025-08-14T16:06:43.9771111Z ##[debug]0
+2025-08-14T16:06:43.9773276Z ##[debug]
+2025-08-14T16:06:43.9775629Z Deleting the contents of '/home/runner/work/my-arabic-blog/my-arabic-blog'
+2025-08-14T16:06:43.9779966Z ::group::Initializing the repository
+2025-08-14T16:06:43.9781183Z ##[group]Initializing the repository
+2025-08-14T16:06:43.9784233Z [command]/usr/bin/git init /home/runner/work/my-arabic-blog/my-arabic-blog
+2025-08-14T16:06:43.9849022Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-08-14T16:06:43.9852292Z hint: is subject to change. To configure the initial branch name to use in all
+2025-08-14T16:06:43.9854201Z hint: of your new repositories, which will suppress this warning, call:
+2025-08-14T16:06:43.9855607Z hint:
+2025-08-14T16:06:43.9856847Z hint: 	git config --global init.defaultBranch <name>
+2025-08-14T16:06:43.9858443Z hint:
+2025-08-14T16:06:43.9859916Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-08-14T16:06:43.9861787Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-08-14T16:06:43.9863631Z hint:
+2025-08-14T16:06:43.9864454Z hint: 	git branch -m <name>
+2025-08-14T16:06:43.9865387Z hint:
+2025-08-14T16:06:43.9866537Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-08-14T16:06:43.9868642Z Initialized empty Git repository in /home/runner/work/my-arabic-blog/my-arabic-blog/.git/
+2025-08-14T16:06:43.9871143Z ##[debug]0
+2025-08-14T16:06:43.9873151Z ##[debug]Initialized empty Git repository in /home/runner/work/my-arabic-blog/my-arabic-blog/.git/
+2025-08-14T16:06:43.9874776Z ##[debug]
+2025-08-14T16:06:43.9876078Z [command]/usr/bin/git remote add origin https://github.com/trad-alrowais/my-arabic-blog
+2025-08-14T16:06:43.9896883Z ##[debug]0
+2025-08-14T16:06:43.9898273Z ##[debug]
+2025-08-14T16:06:43.9900169Z ::endgroup::
+2025-08-14T16:06:43.9901268Z ##[endgroup]
+2025-08-14T16:06:43.9902870Z ::group::Disabling automatic garbage collection
+2025-08-14T16:06:43.9904074Z ##[group]Disabling automatic garbage collection
+2025-08-14T16:06:43.9905425Z [command]/usr/bin/git config --local gc.auto 0
+2025-08-14T16:06:43.9933583Z ##[debug]0
+2025-08-14T16:06:43.9934948Z ##[debug]
+2025-08-14T16:06:43.9936283Z ::endgroup::
+2025-08-14T16:06:43.9937036Z ##[endgroup]
+2025-08-14T16:06:43.9938418Z ::group::Setting up auth
+2025-08-14T16:06:43.9939618Z ##[group]Setting up auth
+2025-08-14T16:06:43.9941435Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-08-14T16:06:43.9966751Z ##[debug]1
+2025-08-14T16:06:43.9968055Z ##[debug]
+2025-08-14T16:06:43.9972656Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-08-14T16:06:44.0245760Z ##[debug]0
+2025-08-14T16:06:44.0250930Z ##[debug]
+2025-08-14T16:06:44.0252673Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-08-14T16:06:44.0278240Z ##[debug]1
+2025-08-14T16:06:44.0280180Z ##[debug]
+2025-08-14T16:06:44.0284648Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-08-14T16:06:44.0503337Z ##[debug]0
+2025-08-14T16:06:44.0504782Z ##[debug]
+2025-08-14T16:06:44.0512224Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-08-14T16:06:44.0547147Z ##[debug]0
+2025-08-14T16:06:44.0549611Z ##[debug]
+2025-08-14T16:06:44.0556137Z ::endgroup::
+2025-08-14T16:06:44.0557525Z ##[endgroup]
+2025-08-14T16:06:44.0560350Z ::group::Fetching the repository
+2025-08-14T16:06:44.0562107Z ##[group]Fetching the repository
+2025-08-14T16:06:44.0568545Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +5e8ea350377ccb17f468fb52e4023468f8323cee:refs/remotes/origin/main
+2025-08-14T16:06:44.2362129Z From https://github.com/trad-alrowais/my-arabic-blog
+2025-08-14T16:06:44.2365279Z  * [new ref]         5e8ea350377ccb17f468fb52e4023468f8323cee -> origin/main
+2025-08-14T16:06:44.2394181Z ##[debug]0
+2025-08-14T16:06:44.2396405Z ##[debug]
+2025-08-14T16:06:44.2398409Z ::endgroup::
+2025-08-14T16:06:44.2399822Z ##[endgroup]
+2025-08-14T16:06:44.2401603Z ::group::Determining the checkout info
+2025-08-14T16:06:44.2402893Z ##[group]Determining the checkout info
+2025-08-14T16:06:44.2405330Z ::endgroup::
+2025-08-14T16:06:44.2406585Z ##[endgroup]
+2025-08-14T16:06:44.2407626Z [command]/usr/bin/git sparse-checkout disable
+2025-08-14T16:06:44.2441867Z ##[debug]0
+2025-08-14T16:06:44.2443892Z ##[debug]
+2025-08-14T16:06:44.2447831Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-08-14T16:06:44.2478361Z ##[debug]0
+2025-08-14T16:06:44.2480867Z ##[debug]
+2025-08-14T16:06:44.2482388Z ::group::Checking out the ref
+2025-08-14T16:06:44.2483849Z ##[group]Checking out the ref
+2025-08-14T16:06:44.2486325Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-08-14T16:06:44.2528786Z Switched to a new branch 'main'
+2025-08-14T16:06:44.2531604Z branch 'main' set up to track 'origin/main'.
+2025-08-14T16:06:44.2537799Z ##[debug]0
+2025-08-14T16:06:44.2540784Z ##[debug]branch 'main' set up to track 'origin/main'.
+2025-08-14T16:06:44.2542692Z ##[debug]
+2025-08-14T16:06:44.2544225Z ::endgroup::
+2025-08-14T16:06:44.2545005Z ##[endgroup]
+2025-08-14T16:06:44.2574721Z ##[debug]0
+2025-08-14T16:06:44.2577374Z ##[debug]commit 5e8ea350377ccb17f468fb52e4023468f8323cee
+2025-08-14T16:06:44.2580116Z ##[debug]Author: Teras Alrowes <tradalrowais@gmail.com>
+2025-08-14T16:06:44.2582140Z ##[debug]Date:   Thu Aug 14 11:50:12 2025 +0300
+2025-08-14T16:06:44.2583831Z ##[debug]
+2025-08-14T16:06:44.2585041Z ##[debug]    Update HTML.sitemap.xml.robots.txt
+2025-08-14T16:06:44.2586157Z ##[debug]    
+2025-08-14T16:06:44.2587231Z ##[debug]    Signed-off-by: Teras Alrowes <tradalrowais@gmail.com>
+2025-08-14T16:06:44.2588513Z ##[debug]
+2025-08-14T16:06:44.2589721Z [command]/usr/bin/git log -1 --format=%H
+2025-08-14T16:06:44.2606181Z 5e8ea350377ccb17f468fb52e4023468f8323cee
+2025-08-14T16:06:44.2612453Z ##[debug]0
+2025-08-14T16:06:44.2614851Z ##[debug]5e8ea350377ccb17f468fb52e4023468f8323cee
+2025-08-14T16:06:44.2616998Z ##[debug]
+2025-08-14T16:06:44.2619967Z ##[debug]Unsetting HOME override
+2025-08-14T16:06:44.2627967Z ::remove-matcher owner=checkout-git::
+2025-08-14T16:06:44.2643814Z ##[debug]Removed matchers: 'checkout-git'
+2025-08-14T16:06:44.2699709Z ##[debug]Node Action run completed with exit code 0
+2025-08-14T16:06:44.2736209Z ##[debug]Save intra-action state isPost = true
+2025-08-14T16:06:44.2737625Z ##[debug]Save intra-action state setSafeDirectory = true
+2025-08-14T16:06:44.2739728Z ##[debug]Save intra-action state repositoryPath = /home/runner/work/my-arabic-blog/my-arabic-blog
+2025-08-14T16:06:44.2745255Z ##[debug]Set output commit = 5e8ea350377ccb17f468fb52e4023468f8323cee
+2025-08-14T16:06:44.2747000Z ##[debug]Set output ref = refs/heads/main
+2025-08-14T16:06:44.2753988Z ##[debug]Finishing: Checkout
+2025-08-14T16:06:44.2776095Z ##[debug]Evaluating condition for step: 'Setup Pages'
+2025-08-14T16:06:44.2779851Z ##[debug]Evaluating: success()
+2025-08-14T16:06:44.2781291Z ##[debug]Evaluating success:
+2025-08-14T16:06:44.2782686Z ##[debug]=> true
+2025-08-14T16:06:44.2783967Z ##[debug]Result: true
+2025-08-14T16:06:44.2785632Z ##[debug]Starting: Setup Pages
+2025-08-14T16:06:44.2835767Z ##[debug]Loading inputs
+2025-08-14T16:06:44.2904755Z ##[debug]Evaluating: github.token
+2025-08-14T16:06:44.2905806Z ##[debug]Evaluating Index:
+2025-08-14T16:06:44.2906676Z ##[debug]..Evaluating github:
+2025-08-14T16:06:44.2907561Z ##[debug]..=> Object
+2025-08-14T16:06:44.2908349Z ##[debug]..Evaluating String:
+2025-08-14T16:06:44.2909489Z ##[debug]..=> 'token'
+2025-08-14T16:06:44.2910760Z ##[debug]=> '***'
+2025-08-14T16:06:44.2911794Z ##[debug]Result: '***'
+2025-08-14T16:06:44.2915809Z ##[debug]Loading env
+2025-08-14T16:06:44.2927792Z ##[group]Run actions/configure-pages@v5
+2025-08-14T16:06:44.2928940Z with:
+2025-08-14T16:06:44.2930103Z   token: ***
+2025-08-14T16:06:44.2930798Z   enablement: false
+2025-08-14T16:06:44.2931529Z ##[endgroup]
+2025-08-14T16:06:44.3841850Z ##[debug]all variables are set
+2025-08-14T16:06:44.6050594Z ##[debug]Node Action run completed with exit code 0
+2025-08-14T16:06:44.6061699Z ##[debug]GITHUB_PAGES='true'
+2025-08-14T16:06:44.6065756Z ##[debug]Set output base_url = https://trad-alrowais.github.io/my-arabic-blog
+2025-08-14T16:06:44.6067417Z ##[debug]Set output origin = https://trad-alrowais.github.io
+2025-08-14T16:06:44.6068727Z ##[debug]Set output host = trad-alrowais.github.io
+2025-08-14T16:06:44.6070190Z ##[debug]Set output base_path = /my-arabic-blog
+2025-08-14T16:06:44.6072337Z ##[debug]Finishing: Setup Pages
+2025-08-14T16:06:44.6092014Z ##[debug]Evaluating condition for step: 'Upload artifact'
+2025-08-14T16:06:44.6094966Z ##[debug]Evaluating: success()
+2025-08-14T16:06:44.6096214Z ##[debug]Evaluating success:
+2025-08-14T16:06:44.6097608Z ##[debug]=> true
+2025-08-14T16:06:44.6098743Z ##[debug]Result: true
+2025-08-14T16:06:44.6101068Z ##[debug]Starting: Upload artifact
+2025-08-14T16:06:44.6227149Z ##[debug]Loading inputs
+2025-08-14T16:06:44.6244599Z ##[debug]Loading env
+2025-08-14T16:06:44.6261018Z ##[group]Run actions/upload-pages-artifact@v3
+2025-08-14T16:06:44.6262017Z with:
+2025-08-14T16:06:44.6262668Z   path: .
+2025-08-14T16:06:44.6263336Z   name: github-pages
+2025-08-14T16:06:44.6264079Z   retention-days: 1
+2025-08-14T16:06:44.6264779Z env:
+2025-08-14T16:06:44.6265429Z   GITHUB_PAGES: true
+2025-08-14T16:06:44.6266163Z ##[endgroup]
+2025-08-14T16:06:44.6321756Z ##[debug]Evaluating: inputs.path
+2025-08-14T16:06:44.6322816Z ##[debug]Evaluating Index:
+2025-08-14T16:06:44.6323710Z ##[debug]..Evaluating inputs:
+2025-08-14T16:06:44.6324679Z ##[debug]..=> Object
+2025-08-14T16:06:44.6325482Z ##[debug]..Evaluating String:
+2025-08-14T16:06:44.6326356Z ##[debug]..=> 'path'
+2025-08-14T16:06:44.6327258Z ##[debug]=> '.'
+2025-08-14T16:06:44.6328013Z ##[debug]Result: '.'
+2025-08-14T16:06:44.6329272Z ##[debug]Evaluating condition for step: 'run'
+2025-08-14T16:06:44.6335909Z ##[debug]Evaluating: (success() && (runner.os == 'Linux'))
+2025-08-14T16:06:44.6337412Z ##[debug]Evaluating And:
+2025-08-14T16:06:44.6340351Z ##[debug]..Evaluating success:
+2025-08-14T16:06:44.6341966Z ##[debug]..=> true
+2025-08-14T16:06:44.6343175Z ##[debug]..Evaluating Equal:
+2025-08-14T16:06:44.6345156Z ##[debug]....Evaluating Index:
+2025-08-14T16:06:44.6346370Z ##[debug]......Evaluating runner:
+2025-08-14T16:06:44.6347607Z ##[debug]......=> Object
+2025-08-14T16:06:44.6348762Z ##[debug]......Evaluating String:
+2025-08-14T16:06:44.6350162Z ##[debug]......=> 'os'
+2025-08-14T16:06:44.6351325Z ##[debug]....=> 'Linux'
+2025-08-14T16:06:44.6352478Z ##[debug]....Evaluating String:
+2025-08-14T16:06:44.6353609Z ##[debug]....=> 'Linux'
+2025-08-14T16:06:44.6357985Z ##[debug]..=> true
+2025-08-14T16:06:44.6359480Z ##[debug]=> true
+2025-08-14T16:06:44.6363606Z ##[debug]Expanded: (true && ('Linux' == 'Linux'))
+2025-08-14T16:06:44.6365006Z ##[debug]Result: true
+2025-08-14T16:06:44.6373666Z ##[debug]Starting: run
+2025-08-14T16:06:44.6390038Z ##[debug]Loading inputs
+2025-08-14T16:06:44.6391961Z ##[debug]Loading env
+2025-08-14T16:06:44.6413405Z ##[group]Run echo ::group::Archive artifact
+2025-08-14T16:06:44.6414513Z [36;1mecho ::group::Archive artifact[0m
+2025-08-14T16:06:44.6415452Z [36;1mtar \[0m
+2025-08-14T16:06:44.6416256Z [36;1m  --dereference --hard-dereference \[0m
+2025-08-14T16:06:44.6417307Z [36;1m  --directory "$INPUT_PATH" \[0m
+2025-08-14T16:06:44.6418324Z [36;1m  -cvf "$RUNNER_TEMP/artifact.tar" \[0m
+2025-08-14T16:06:44.6419466Z [36;1m  --exclude=.git \[0m
+2025-08-14T16:06:44.6420320Z [36;1m  --exclude=.github \[0m
+2025-08-14T16:06:44.6421184Z [36;1m  .[0m
+2025-08-14T16:06:44.6421915Z [36;1mecho ::endgroup::[0m
+2025-08-14T16:06:44.6514506Z shell: /usr/bin/sh -e {0}
+2025-08-14T16:06:44.6515352Z env:
+2025-08-14T16:06:44.6516014Z   GITHUB_PAGES: true
+2025-08-14T16:06:44.6517075Z   INPUT_PATH: .
+2025-08-14T16:06:44.6517771Z ##[endgroup]
+2025-08-14T16:06:44.6591043Z ##[debug]/usr/bin/sh -e /home/runner/work/_temp/09e4e7f1-a293-49fe-b27b-9fccd9c5e7bc.sh
+2025-08-14T16:06:44.6611894Z ::group::Archive artifact
+2025-08-14T16:06:44.6613540Z ##[group]Archive artifact
+2025-08-14T16:06:44.6625183Z ./
+2025-08-14T16:06:44.6625940Z ./HTML.sitemap.xml.robots.txt
+2025-08-14T16:06:44.6626889Z ./ contact.html
+2025-08-14T16:06:44.6628052Z ./about.html
+2025-08-14T16:06:44.6629587Z ./index.html
+2025-08-14T16:06:44.6631242Z ::endgroup::
+2025-08-14T16:06:44.6631944Z ##[endgroup]
+2025-08-14T16:06:44.6641766Z ##[debug]Finished: run
+2025-08-14T16:06:44.6650633Z ##[debug]Evaluating: inputs.path
+2025-08-14T16:06:44.6651595Z ##[debug]Evaluating Index:
+2025-08-14T16:06:44.6652694Z ##[debug]..Evaluating inputs:
+2025-08-14T16:06:44.6653621Z ##[debug]..=> Object
+2025-08-14T16:06:44.6654423Z ##[debug]..Evaluating String:
+2025-08-14T16:06:44.6655290Z ##[debug]..=> 'path'
+2025-08-14T16:06:44.6656082Z ##[debug]=> '.'
+2025-08-14T16:06:44.6656842Z ##[debug]Result: '.'
+2025-08-14T16:06:44.6657869Z ##[debug]Evaluating condition for step: 'run'
+2025-08-14T16:06:44.6660838Z ##[debug]Evaluating: (success() && (runner.os == 'macOS'))
+2025-08-14T16:06:44.6662273Z ##[debug]Evaluating And:
+2025-08-14T16:06:44.6663418Z ##[debug]..Evaluating success:
+2025-08-14T16:06:44.6664683Z ##[debug]..=> true
+2025-08-14T16:06:44.6665757Z ##[debug]..Evaluating Equal:
+2025-08-14T16:06:44.6666957Z ##[debug]....Evaluating Index:
+2025-08-14T16:06:44.6668151Z ##[debug]......Evaluating runner:
+2025-08-14T16:06:44.6669711Z ##[debug]......=> Object
+2025-08-14T16:06:44.6670894Z ##[debug]......Evaluating String:
+2025-08-14T16:06:44.6672048Z ##[debug]......=> 'os'
+2025-08-14T16:06:44.6673247Z ##[debug]....=> 'Linux'
+2025-08-14T16:06:44.6674350Z ##[debug]....Evaluating String:
+2025-08-14T16:06:44.6675462Z ##[debug]....=> 'macOS'
+2025-08-14T16:06:44.6676478Z ##[debug]..=> false
+2025-08-14T16:06:44.6677477Z ##[debug]=> false
+2025-08-14T16:06:44.6678802Z ##[debug]Expanded: (true && ('Linux' == 'macOS'))
+2025-08-14T16:06:44.6680526Z ##[debug]Result: false
+2025-08-14T16:06:44.6684827Z ##[debug]Evaluating: inputs.path
+2025-08-14T16:06:44.6685793Z ##[debug]Evaluating Index:
+2025-08-14T16:06:44.6686642Z ##[debug]..Evaluating inputs:
+2025-08-14T16:06:44.6687499Z ##[debug]..=> Object
+2025-08-14T16:06:44.6688273Z ##[debug]..Evaluating String:
+2025-08-14T16:06:44.6689380Z ##[debug]..=> 'path'
+2025-08-14T16:06:44.6690186Z ##[debug]=> '.'
+2025-08-14T16:06:44.6690915Z ##[debug]Result: '.'
+2025-08-14T16:06:44.6691913Z ##[debug]Evaluating condition for step: 'run'
+2025-08-14T16:06:44.6694461Z ##[debug]Evaluating: (success() && (runner.os == 'Windows'))
+2025-08-14T16:06:44.6695883Z ##[debug]Evaluating And:
+2025-08-14T16:06:44.6697019Z ##[debug]..Evaluating success:
+2025-08-14T16:06:44.6698181Z ##[debug]..=> true
+2025-08-14T16:06:44.6699472Z ##[debug]..Evaluating Equal:
+2025-08-14T16:06:44.6700641Z ##[debug]....Evaluating Index:
+2025-08-14T16:06:44.6701820Z ##[debug]......Evaluating runner:
+2025-08-14T16:06:44.6703046Z ##[debug]......=> Object
+2025-08-14T16:06:44.6704156Z ##[debug]......Evaluating String:
+2025-08-14T16:06:44.6705291Z ##[debug]......=> 'os'
+2025-08-14T16:06:44.6706330Z ##[debug]....=> 'Linux'
+2025-08-14T16:06:44.6707402Z ##[debug]....Evaluating String:
+2025-08-14T16:06:44.6708515Z ##[debug]....=> 'Windows'
+2025-08-14T16:06:44.6709754Z ##[debug]..=> false
+2025-08-14T16:06:44.6710730Z ##[debug]=> false
+2025-08-14T16:06:44.6712067Z ##[debug]Expanded: (true && ('Linux' == 'Windows'))
+2025-08-14T16:06:44.6713437Z ##[debug]Result: false
+2025-08-14T16:06:44.6715924Z ##[debug]Evaluating condition for step: 'run'
+2025-08-14T16:06:44.6717787Z ##[debug]Evaluating: success()
+2025-08-14T16:06:44.6718969Z ##[debug]Evaluating success:
+2025-08-14T16:06:44.6720392Z ##[debug]=> true
+2025-08-14T16:06:44.6721496Z ##[debug]Result: true
+2025-08-14T16:06:44.6722737Z ##[debug]Starting: run
+2025-08-14T16:06:44.6772986Z ##[debug]Loading inputs
+2025-08-14T16:06:44.6775088Z ##[debug]Evaluating: inputs.name
+2025-08-14T16:06:44.6776301Z ##[debug]Evaluating Index:
+2025-08-14T16:06:44.6777208Z ##[debug]..Evaluating inputs:
+2025-08-14T16:06:44.6778139Z ##[debug]..=> Object
+2025-08-14T16:06:44.6778975Z ##[debug]..Evaluating String:
+2025-08-14T16:06:44.6780085Z ##[debug]..=> 'name'
+2025-08-14T16:06:44.6780907Z ##[debug]=> 'github-pages'
+2025-08-14T16:06:44.6781871Z ##[debug]Result: 'github-pages'
+2025-08-14T16:06:44.6784555Z ##[debug]Evaluating: format('{0}/artifact.tar', runner.temp)
+2025-08-14T16:06:44.6785696Z ##[debug]Evaluating format:
+2025-08-14T16:06:44.6790198Z ##[debug]..Evaluating String:
+2025-08-14T16:06:44.6791134Z ##[debug]..=> '{0}/artifact.tar'
+2025-08-14T16:06:44.6803798Z ##[debug]..Evaluating Index:
+2025-08-14T16:06:44.6804712Z ##[debug]....Evaluating runner:
+2025-08-14T16:06:44.6805823Z ##[debug]....=> Object
+2025-08-14T16:06:44.6806681Z ##[debug]....Evaluating String:
+2025-08-14T16:06:44.6807543Z ##[debug]....=> 'temp'
+2025-08-14T16:06:44.6808398Z ##[debug]..=> '/home/runner/work/_temp'
+2025-08-14T16:06:44.6810505Z ##[debug]=> '/home/runner/work/_temp/artifact.tar'
+2025-08-14T16:06:44.6811697Z ##[debug]Result: '/home/runner/work/_temp/artifact.tar'
+2025-08-14T16:06:44.6813281Z ##[debug]Evaluating: inputs.retention-days
+2025-08-14T16:06:44.6814278Z ##[debug]Evaluating Index:
+2025-08-14T16:06:44.6815122Z ##[debug]..Evaluating inputs:
+2025-08-14T16:06:44.6816000Z ##[debug]..=> Object
+2025-08-14T16:06:44.6816771Z ##[debug]..Evaluating String:
+2025-08-14T16:06:44.6817644Z ##[debug]..=> 'retention-days'
+2025-08-14T16:06:44.6818508Z ##[debug]=> '1'
+2025-08-14T16:06:44.6819483Z ##[debug]Result: '1'
+2025-08-14T16:06:44.6824945Z ##[debug]Loading env
+2025-08-14T16:06:44.6836123Z ##[group]Run actions/upload-artifact@v4
+2025-08-14T16:06:44.6837023Z with:
+2025-08-14T16:06:44.6837688Z   name: github-pages
+2025-08-14T16:06:44.6838508Z   path: /home/runner/work/_temp/artifact.tar
+2025-08-14T16:06:44.6839667Z   retention-days: 1
+2025-08-14T16:06:44.6840416Z   if-no-files-found: error
+2025-08-14T16:06:44.6841227Z   compression-level: 6
+2025-08-14T16:06:44.6841968Z   overwrite: false
+2025-08-14T16:06:44.6842707Z   include-hidden-files: false
+2025-08-14T16:06:44.6843514Z env:
+2025-08-14T16:06:44.6844147Z   GITHUB_PAGES: true
+2025-08-14T16:06:44.6844859Z ##[endgroup]
+2025-08-14T16:06:44.8910362Z ##[debug]followSymbolicLinks 'true'
+2025-08-14T16:06:44.8912449Z ##[debug]implicitDescendants 'true'
+2025-08-14T16:06:44.8914303Z ##[debug]omitBrokenSymbolicLinks 'true'
+2025-08-14T16:06:44.8916185Z ##[debug]excludeHiddenFiles 'true'
+2025-08-14T16:06:44.8932533Z ##[debug]followSymbolicLinks 'true'
+2025-08-14T16:06:44.8934048Z ##[debug]implicitDescendants 'true'
+2025-08-14T16:06:44.8935613Z ##[debug]matchDirectories 'true'
+2025-08-14T16:06:44.8937443Z ##[debug]omitBrokenSymbolicLinks 'true'
+2025-08-14T16:06:44.8939224Z ##[debug]excludeHiddenFiles 'true'
+2025-08-14T16:06:44.8940955Z ##[debug]Search path '/home/runner/work/_temp/artifact.tar'
+2025-08-14T16:06:44.8966358Z ##[debug]File:/home/runner/work/_temp/artifact.tar was found using the provided searchPath
+2025-08-14T16:06:44.8968078Z With the provided path, there will be 1 file uploaded
+2025-08-14T16:06:44.8970096Z ##[debug]Root artifact directory is /home/runner/work/_temp
+2025-08-14T16:06:44.8971492Z Artifact name is valid!
+2025-08-14T16:06:44.8972554Z Root directory input is valid!
+2025-08-14T16:06:44.8992896Z ##[debug]Workflow Run Backend ID: 107b6314-b6b0-4ead-97e6-554abd360ae8
+2025-08-14T16:06:44.8995215Z ##[debug]Workflow Job Run Backend ID: 5c8a90c1-a6cd-5be3-a441-24b085d4f447
+2025-08-14T16:06:44.9009849Z ##[debug][Request] CreateArtifact https://results-receiver.actions.githubusercontent.com/twirp/github.actions.results.api.v1.ArtifactService/CreateArtifact
+2025-08-14T16:06:45.0058796Z ##[debug][Response] - 200
+2025-08-14T16:06:45.0060750Z ##[debug]Headers: {
+2025-08-14T16:06:45.0061678Z ##[debug]  "content-length": "582",
+2025-08-14T16:06:45.0063337Z ##[debug]  "content-type": "application/json",
+2025-08-14T16:06:45.0064936Z ##[debug]  "date": "Thu, 14 Aug 2025 16:06:45 GMT",
+2025-08-14T16:06:45.0066609Z ##[debug]  "x-github-backend": "Kubernetes",
+2025-08-14T16:06:45.0068109Z ##[debug]  "x-github-request-id": "CBC2:22E72B:3455D6:3D4CE2:689E0994"
+2025-08-14T16:06:45.0069505Z ##[debug]}
+2025-08-14T16:06:45.0070978Z ::add-mask::***
+2025-08-14T16:06:45.0073812Z ::add-mask::***
+2025-08-14T16:06:45.0075696Z ##[debug]Body: {
+2025-08-14T16:06:45.0076430Z ##[debug]  "ok": true,
+2025-08-14T16:06:45.0083861Z ##[debug]  "signed_upload_url": "https://productionresultssa12.blob.core.windows.net/actions-results/107b6314-b6b0-4ead-97e6-554abd360ae8/workflow-job-run-5c8a90c1-a6cd-5be3-a441-24b085d4f447/artifacts/afa28766d3caf497f6ad369ac6c5505dd8db6689a300a79784c20dcaaf97018f.zip?se=2025-08-14T17%3A06%3A44Z&sig=***&ske=2025-08-15T01%3A59%3A24Z&skoid=ca7593d4-ee42-46cd-af88-8b886a2f84eb&sks=b&skt=2025-08-14T13%3A59%3A24Z&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skv=2025-05-05&sp=cw&spr=https&sr=b&st=2025-08-14T16%3A06%3A39Z&sv=2025-05-05"
+2025-08-14T16:06:45.0090343Z ##[debug]}
+2025-08-14T16:06:45.0091763Z ##[debug]Creating Artifact archive with compressionLevel: 6
+2025-08-14T16:06:45.0094518Z ##[debug]Zip write high watermark value 8388608
+2025-08-14T16:06:45.0096094Z ##[debug]Zip read high watermark value 8388608
+2025-08-14T16:06:45.0143913Z ##[debug]Uploading artifact zip to blob storage with maxConcurrency: 5, bufferSize: 8388608
+2025-08-14T16:06:45.0152853Z Beginning upload of artifact content to blob storage
+2025-08-14T16:06:45.0276752Z ##[debug]Zip stream for upload has ended.
+2025-08-14T16:06:45.0279395Z ##[debug]Zip stream for upload has finished.
+2025-08-14T16:06:45.0785443Z Uploaded bytes 1393
+2025-08-14T16:06:45.1000399Z Finished uploading artifact content to blob storage!
+2025-08-14T16:06:45.1003814Z SHA256 digest of uploaded artifact zip is c20376a8e5ca27ccbafe22fb79be32b81f3a5c3bc9c313ab30e163c39f87a396
+2025-08-14T16:06:45.1006532Z Finalizing artifact upload
+2025-08-14T16:06:45.1010769Z ##[debug][Request] FinalizeArtifact https://results-receiver.actions.githubusercontent.com/twirp/github.actions.results.api.v1.ArtifactService/FinalizeArtifact
+2025-08-14T16:06:45.2084040Z ##[debug][Response] - 200
+2025-08-14T16:06:45.2086399Z ##[debug]Headers: {
+2025-08-14T16:06:45.2087449Z ##[debug]  "content-length": "38",
+2025-08-14T16:06:45.2088579Z ##[debug]  "content-type": "application/json",
+2025-08-14T16:06:45.2090001Z ##[debug]  "date": "Thu, 14 Aug 2025 16:06:45 GMT",
+2025-08-14T16:06:45.2091242Z ##[debug]  "x-github-backend": "Kubernetes",
+2025-08-14T16:06:45.2092663Z ##[debug]  "x-github-request-id": "CBC2:22E72B:34565F:3D4D61:689E0995"
+2025-08-14T16:06:45.2094359Z ##[debug]}
+2025-08-14T16:06:45.2095610Z ##[debug]Body: {
+2025-08-14T16:06:45.2096419Z ##[debug]  "ok": true,
+2025-08-14T16:06:45.2097258Z ##[debug]  "artifact_id": "3766816159"
+2025-08-14T16:06:45.2098209Z ##[debug]}
+2025-08-14T16:06:45.2099539Z Artifact github-pages.zip successfully finalized. Artifact ID 3766816159
+2025-08-14T16:06:45.2101628Z Artifact github-pages has been successfully uploaded! Final size is 1393 bytes. Artifact ID is 3766816159
+2025-08-14T16:06:45.2104120Z Artifact download URL: https://github.com/trad-alrowais/my-arabic-blog/actions/runs/16960479670/artifacts/3766816159
+2025-08-14T16:06:45.2163524Z ##[debug]Node Action run completed with exit code 0
+2025-08-14T16:06:45.2184387Z ##[debug]Set output artifact-id = 3766816159
+2025-08-14T16:06:45.2186575Z ##[debug]Set output artifact-digest = c20376a8e5ca27ccbafe22fb79be32b81f3a5c3bc9c313ab30e163c39f87a396
+2025-08-14T16:06:45.2190341Z ##[debug]Set output artifact-url = https://github.com/trad-alrowais/my-arabic-blog/actions/runs/16960479670/artifacts/3766816159
+2025-08-14T16:06:45.2194194Z ##[debug]Finished: run
+2025-08-14T16:06:45.2220677Z ##[debug]Evaluating: steps.upload-artifact.outputs.artifact-id
+2025-08-14T16:06:45.2222039Z ##[debug]Evaluating Index:
+2025-08-14T16:06:45.2222940Z ##[debug]..Evaluating Index:
+2025-08-14T16:06:45.2223827Z ##[debug]....Evaluating Index:
+2025-08-14T16:06:45.2224721Z ##[debug]......Evaluating steps:
+2025-08-14T16:06:45.2225925Z ##[debug]......=> Object
+2025-08-14T16:06:45.2226802Z ##[debug]......Evaluating String:
+2025-08-14T16:06:45.2227744Z ##[debug]......=> 'upload-artifact'
+2025-08-14T16:06:45.2228714Z ##[debug]....=> Object
+2025-08-14T16:06:45.2229800Z ##[debug]....Evaluating String:
+2025-08-14T16:06:45.2230689Z ##[debug]....=> 'outputs'
+2025-08-14T16:06:45.2231518Z ##[debug]..=> Object
+2025-08-14T16:06:45.2232327Z ##[debug]..Evaluating String:
+2025-08-14T16:06:45.2233224Z ##[debug]..=> 'artifact-id'
+2025-08-14T16:06:45.2234073Z ##[debug]=> '3766816159'
+2025-08-14T16:06:45.2234953Z ##[debug]Result: '3766816159'
+2025-08-14T16:06:45.2244739Z ##[debug]Finishing: Upload artifact
+2025-08-14T16:06:45.2263194Z ##[debug]Evaluating condition for step: 'Deploy to GitHub Pages'
+2025-08-14T16:06:45.2265643Z ##[debug]Evaluating: success()
+2025-08-14T16:06:45.2266876Z ##[debug]Evaluating success:
+2025-08-14T16:06:45.2268078Z ##[debug]=> true
+2025-08-14T16:06:45.2269301Z ##[debug]Result: true
+2025-08-14T16:06:45.2270708Z ##[debug]Starting: Deploy to GitHub Pages
+2025-08-14T16:06:45.2317871Z ##[debug]Loading inputs
+2025-08-14T16:06:45.2320140Z ##[debug]Evaluating: github.token
+2025-08-14T16:06:45.2321180Z ##[debug]Evaluating Index:
+2025-08-14T16:06:45.2322110Z ##[debug]..Evaluating github:
+2025-08-14T16:06:45.2323059Z ##[debug]..=> Object
+2025-08-14T16:06:45.2323917Z ##[debug]..Evaluating String:
+2025-08-14T16:06:45.2324835Z ##[debug]..=> 'token'
+2025-08-14T16:06:45.2326013Z ##[debug]=> '***'
+2025-08-14T16:06:45.2327087Z ##[debug]Result: '***'
+2025-08-14T16:06:45.2336267Z ##[debug]Loading env
+2025-08-14T16:06:45.2347631Z ##[group]Run actions/deploy-pages@v4
+2025-08-14T16:06:45.2348532Z with:
+2025-08-14T16:06:45.2349566Z   token: ***
+2025-08-14T16:06:45.2350258Z   timeout: 600000
+2025-08-14T16:06:45.2350967Z   error_count: 10
+2025-08-14T16:06:45.2351707Z   reporting_interval: 5000
+2025-08-14T16:06:45.2352551Z   artifact_name: github-pages
+2025-08-14T16:06:45.2353392Z   preview: false
+2025-08-14T16:06:45.2354088Z env:
+2025-08-14T16:06:45.2354764Z   GITHUB_PAGES: true
+2025-08-14T16:06:45.2355497Z ##[endgroup]
+2025-08-14T16:06:45.4667776Z ##[debug]all variables are set
+2025-08-14T16:06:45.4671611Z ##[debug]all variables are set
+2025-08-14T16:06:45.4675064Z ##[debug]ID token url is https://run-actions-2-azure-eastus.actions.githubusercontent.com/23//idtoken/107b6314-b6b0-4ead-97e6-554abd360ae8/5c8a90c1-a6cd-5be3-a441-24b085d4f447?api-version=2.0
+2025-08-14T16:06:45.5671626Z ::add-mask::***
+2025-08-14T16:06:45.5676465Z ##[debug]Actor: trad-alrowais
+2025-08-14T16:06:45.5678010Z ##[debug]Action ID: deployment
+2025-08-14T16:06:45.5679724Z ##[debug]Actions Workflow Run ID: 16960479670
+2025-08-14T16:06:45.5680967Z Fetching artifact metadata for "github-pages" in this workflow run
+2025-08-14T16:06:45.5695761Z ##[debug]Workflow Run Backend ID: 107b6314-b6b0-4ead-97e6-554abd360ae8
+2025-08-14T16:06:45.5698713Z ##[debug]Workflow Job Run Backend ID: 5c8a90c1-a6cd-5be3-a441-24b085d4f447
+2025-08-14T16:06:45.5704018Z ##[debug][Request] ListArtifacts https://results-receiver.actions.githubusercontent.com/twirp/github.actions.results.api.v1.ArtifactService/ListArtifacts
+2025-08-14T16:06:45.6679737Z ##[debug][Response] - 200
+2025-08-14T16:06:45.6680985Z ##[debug]Headers: {
+2025-08-14T16:06:45.6681570Z ##[debug]  "content-length": "651",
+2025-08-14T16:06:45.6682251Z ##[debug]  "content-type": "application/json",
+2025-08-14T16:06:45.6682963Z ##[debug]  "date": "Thu, 14 Aug 2025 16:06:45 GMT",
+2025-08-14T16:06:45.6683684Z ##[debug]  "x-github-backend": "Kubernetes",
+2025-08-14T16:06:45.6684494Z ##[debug]  "x-github-request-id": "CBC4:21948F:33D607:3CE6E0:689E0995"
+2025-08-14T16:06:45.6685239Z ##[debug]}
+2025-08-14T16:06:45.6686216Z ##[debug]Body: {
+2025-08-14T16:06:45.6686727Z ##[debug]  "artifacts": [
+2025-08-14T16:06:45.6687252Z ##[debug]    {
+2025-08-14T16:06:45.6687933Z ##[debug]      "workflow_run_backend_id": "d4899d83-4016-498c-a889-e7baa80d9ea1",
+2025-08-14T16:06:45.6688993Z ##[debug]      "workflow_job_run_backend_id": "086ac512-8fee-58f7-b448-df2b5f19f12a",
+2025-08-14T16:06:45.6690566Z ##[debug]      "database_id": "3763087545",
+2025-08-14T16:06:45.6691202Z ##[debug]      "name": "github-pages",
+2025-08-14T16:06:45.6691814Z ##[debug]      "size": "1393",
+2025-08-14T16:06:45.6692412Z ##[debug]      "created_at": "2025-08-14T08:51:12Z",
+2025-08-14T16:06:45.6693361Z ##[debug]      "digest": "sha256:37ba79a4fa0f62e9ee5503f444d8e04529a4e609eb6d4490c70b9f6b3e494f2d"
+2025-08-14T16:06:45.6694291Z ##[debug]    },
+2025-08-14T16:06:45.6694757Z ##[debug]    {
+2025-08-14T16:06:45.6695421Z ##[debug]      "workflow_run_backend_id": "107b6314-b6b0-4ead-97e6-554abd360ae8",
+2025-08-14T16:06:45.6696738Z ##[debug]      "workflow_job_run_backend_id": "5c8a90c1-a6cd-5be3-a441-24b085d4f447",
+2025-08-14T16:06:45.6697547Z ##[debug]      "database_id": "3766816159",
+2025-08-14T16:06:45.6698160Z ##[debug]      "name": "github-pages",
+2025-08-14T16:06:45.6698760Z ##[debug]      "size": "1393",
+2025-08-14T16:06:45.6699564Z ##[debug]      "created_at": "2025-08-14T16:06:45Z",
+2025-08-14T16:06:45.6700561Z ##[debug]      "digest": "sha256:c20376a8e5ca27ccbafe22fb79be32b81f3a5c3bc9c313ab30e163c39f87a396"
+2025-08-14T16:06:45.6701497Z ##[debug]    }
+2025-08-14T16:06:45.6701936Z ##[debug]  ]
+2025-08-14T16:06:45.6702382Z ##[debug]}
+2025-08-14T16:06:45.6702900Z Found 2 artifact(s)
+2025-08-14T16:06:45.6703777Z ##[debug]List artifact count: 2
+2025-08-14T16:06:45.6723177Z ##[error]Fetching artifact metadata failed. Is githubstatus.com reporting issues with API requests, Pages, or Actions? Please re-run the deployment at a later time.
+2025-08-14T16:06:45.8578715Z ##[error]Error: Multiple artifacts named "github-pages" were unexpectedly found for this workflow run. Artifact count is 2.
+    at getArtifactMetadata (/home/runner/work/_actions/actions/deploy-pages/v4/src/internal/api-client.js:89:1)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Deployment.create (/home/runner/work/_actions/actions/deploy-pages/v4/src/internal/deployment.js:66:1)
+    at main (/home/runner/work/_actions/actions/deploy-pages/v4/src/index.js:30:1)
+2025-08-14T16:06:45.8585411Z ##[error]Error: Multiple artifacts named "github-pages" were unexpectedly found for this workflow run. Artifact count is 2.
+2025-08-14T16:06:45.8695833Z ##[debug]Node Action run completed with exit code 1
+2025-08-14T16:06:45.8727039Z ##[debug]Finishing: Deploy to GitHub Pages
+2025-08-14T16:06:45.8748797Z ##[debug]Evaluating condition for step: 'Post Checkout'
+2025-08-14T16:06:45.8751625Z ##[debug]Evaluating: always()
+2025-08-14T16:06:45.8752132Z ##[debug]Evaluating always:
+2025-08-14T16:06:45.8752998Z ##[debug]=> true
+2025-08-14T16:06:45.8753495Z ##[debug]Result: true
+2025-08-14T16:06:45.8754212Z ##[debug]Starting: Post Checkout
+2025-08-14T16:06:45.8798847Z ##[debug]Loading inputs
+2025-08-14T16:06:45.8800275Z ##[debug]Evaluating: github.repository
+2025-08-14T16:06:45.8800707Z ##[debug]Evaluating Index:
+2025-08-14T16:06:45.8801059Z ##[debug]..Evaluating github:
+2025-08-14T16:06:45.8801414Z ##[debug]..=> Object
+2025-08-14T16:06:45.8801740Z ##[debug]..Evaluating String:
+2025-08-14T16:06:45.8802110Z ##[debug]..=> 'repository'
+2025-08-14T16:06:45.8802520Z ##[debug]=> 'trad-alrowais/my-arabic-blog'
+2025-08-14T16:06:45.8802950Z ##[debug]Result: 'trad-alrowais/my-arabic-blog'
+2025-08-14T16:06:45.8804968Z ##[debug]Evaluating: github.token
+2025-08-14T16:06:45.8805386Z ##[debug]Evaluating Index:
+2025-08-14T16:06:45.8805726Z ##[debug]..Evaluating github:
+2025-08-14T16:06:45.8806063Z ##[debug]..=> Object
+2025-08-14T16:06:45.8806376Z ##[debug]..Evaluating String:
+2025-08-14T16:06:45.8806705Z ##[debug]..=> 'token'
+2025-08-14T16:06:45.8807444Z ##[debug]=> '***'
+2025-08-14T16:06:45.8807884Z ##[debug]Result: '***'
+2025-08-14T16:06:45.8818794Z ##[debug]Loading env
+2025-08-14T16:06:45.8824100Z Post job cleanup.
+2025-08-14T16:06:45.9762565Z ##[debug]Getting git version
+2025-08-14T16:06:45.9777174Z [command]/usr/bin/git version
+2025-08-14T16:06:45.9815036Z git version 2.50.1
+2025-08-14T16:06:45.9837693Z ##[debug]0
+2025-08-14T16:06:45.9838303Z ##[debug]git version 2.50.1
+2025-08-14T16:06:45.9839273Z ##[debug]
+2025-08-14T16:06:45.9840274Z ##[debug]Set git useragent to: git/2.50.1 (github-actions-checkout)
+2025-08-14T16:06:45.9843656Z ::add-mask::***
+2025-08-14T16:06:45.9858697Z Temporarily overriding HOME='/home/runner/work/_temp/491d0912-e16b-4402-bf4e-6cd08c021094' before making global git config changes
+2025-08-14T16:06:45.9860631Z Adding repository directory to the temporary git global config as a safe directory
+2025-08-14T16:06:45.9872627Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/my-arabic-blog/my-arabic-blog
+2025-08-14T16:06:45.9901098Z ##[debug]0
+2025-08-14T16:06:45.9901849Z ##[debug]
+2025-08-14T16:06:45.9909373Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-08-14T16:06:45.9936917Z ##[debug]1
+2025-08-14T16:06:45.9937528Z ##[debug]
+2025-08-14T16:06:45.9943000Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-08-14T16:06:46.0168252Z ##[debug]0
+2025-08-14T16:06:46.0168891Z ##[debug]
+2025-08-14T16:06:46.0175070Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-08-14T16:06:46.0197503Z http.https://github.com/.extraheader
+2025-08-14T16:06:46.0204072Z ##[debug]0
+2025-08-14T16:06:46.0204906Z ##[debug]http.https://github.com/.extraheader
+2025-08-14T16:06:46.0205304Z ##[debug]
+2025-08-14T16:06:46.0210751Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-08-14T16:06:46.0237592Z ##[debug]0
+2025-08-14T16:06:46.0238477Z ##[debug]
+2025-08-14T16:06:46.0244117Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-08-14T16:06:46.0470258Z ##[debug]0
+2025-08-14T16:06:46.0470927Z ##[debug]
+2025-08-14T16:06:46.0471513Z ##[debug]Unsetting HOME override
+2025-08-14T16:06:46.0536894Z ##[debug]Node Action run completed with exit code 0
+2025-08-14T16:06:46.0540108Z ##[debug]Finishing: Post Checkout
+2025-08-14T16:06:46.0582809Z ##[debug]Starting: Complete job
+2025-08-14T16:06:46.0584850Z Evaluate and set environment url
+2025-08-14T16:06:46.0587674Z ##[debug]Evaluating: steps.deployment.outputs.page_url
+2025-08-14T16:06:46.0588186Z ##[debug]Evaluating Index:
+2025-08-14T16:06:46.0588564Z ##[debug]..Evaluating Index:
+2025-08-14T16:06:46.0588926Z ##[debug]....Evaluating Index:
+2025-08-14T16:06:46.0589570Z ##[debug]......Evaluating steps:
+2025-08-14T16:06:46.0589966Z ##[debug]......=> Object
+2025-08-14T16:06:46.0590326Z ##[debug]......Evaluating String:
+2025-08-14T16:06:46.0590685Z ##[debug]......=> 'deployment'
+2025-08-14T16:06:46.0591076Z ##[debug]....=> Object
+2025-08-14T16:06:46.0591401Z ##[debug]....Evaluating String:
+2025-08-14T16:06:46.0591742Z ##[debug]....=> 'outputs'
+2025-08-14T16:06:46.0592098Z ##[debug]..=> Object
+2025-08-14T16:06:46.0592433Z ##[debug]..Evaluating String:
+2025-08-14T16:06:46.0592768Z ##[debug]..=> 'page_url'
+2025-08-14T16:06:46.0593080Z ##[debug]=> null
+2025-08-14T16:06:46.0593434Z ##[debug]Result: null
+2025-08-14T16:06:46.0594711Z Evaluated environment url: 
+2025-08-14T16:06:46.0595767Z Uploading runner diagnostic logs
+2025-08-14T16:06:46.0608231Z ##[debug]Starting diagnostic file upload.
+2025-08-14T16:06:46.0608696Z ##[debug]Setting up diagnostic log folders.
+2025-08-14T16:06:46.0611261Z ##[debug]Creating diagnostic log files folder.
+2025-08-14T16:06:46.0619999Z ##[debug]Copying 1 worker diagnostic logs.
+2025-08-14T16:06:46.0629395Z ##[debug]Copying 1 runner diagnostic logs.
+2025-08-14T16:06:46.0630672Z ##[debug]Zipping diagnostic files.
+2025-08-14T16:06:46.0712735Z ##[debug]Uploading diagnostic metadata file.
+2025-08-14T16:06:46.0740917Z ##[debug]Diagnostic file upload complete.
+2025-08-14T16:06:46.0741669Z Completed runner diagnostic log upload
+2025-08-14T16:06:46.0742056Z Cleaning up orphan processes
+2025-08-14T16:06:46.1024420Z ##[debug]Finishing: Complete job
+2025-08-14T16:06:46.1055884Z ##[debug]Finishing: deploy

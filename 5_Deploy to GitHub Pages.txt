@@ -1,0 +1,79 @@
+﻿2025-08-14T16:06:45.2263177Z ##[debug]Evaluating condition for step: 'Deploy to GitHub Pages'
+2025-08-14T16:06:45.2265632Z ##[debug]Evaluating: success()
+2025-08-14T16:06:45.2266872Z ##[debug]Evaluating success:
+2025-08-14T16:06:45.2268074Z ##[debug]=> true
+2025-08-14T16:06:45.2269294Z ##[debug]Result: true
+2025-08-14T16:06:45.2270701Z ##[debug]Starting: Deploy to GitHub Pages
+2025-08-14T16:06:45.2317844Z ##[debug]Loading inputs
+2025-08-14T16:06:45.2320127Z ##[debug]Evaluating: github.token
+2025-08-14T16:06:45.2321175Z ##[debug]Evaluating Index:
+2025-08-14T16:06:45.2322106Z ##[debug]..Evaluating github:
+2025-08-14T16:06:45.2323055Z ##[debug]..=> Object
+2025-08-14T16:06:45.2323913Z ##[debug]..Evaluating String:
+2025-08-14T16:06:45.2324830Z ##[debug]..=> 'token'
+2025-08-14T16:06:45.2326008Z ##[debug]=> '***'
+2025-08-14T16:06:45.2327082Z ##[debug]Result: '***'
+2025-08-14T16:06:45.2336255Z ##[debug]Loading env
+2025-08-14T16:06:45.2347619Z ##[group]Run actions/deploy-pages@v4
+2025-08-14T16:06:45.2348528Z with:
+2025-08-14T16:06:45.2349522Z   token: ***
+2025-08-14T16:06:45.2350254Z   timeout: 600000
+2025-08-14T16:06:45.2350963Z   error_count: 10
+2025-08-14T16:06:45.2351702Z   reporting_interval: 5000
+2025-08-14T16:06:45.2352547Z   artifact_name: github-pages
+2025-08-14T16:06:45.2353388Z   preview: false
+2025-08-14T16:06:45.2354084Z env:
+2025-08-14T16:06:45.2354760Z   GITHUB_PAGES: true
+2025-08-14T16:06:45.2355493Z ##[endgroup]
+2025-08-14T16:06:45.4667734Z ##[debug]all variables are set
+2025-08-14T16:06:45.4671595Z ##[debug]all variables are set
+2025-08-14T16:06:45.4675054Z ##[debug]ID token url is https://run-actions-2-azure-eastus.actions.githubusercontent.com/23//idtoken/107b6314-b6b0-4ead-97e6-554abd360ae8/5c8a90c1-a6cd-5be3-a441-24b085d4f447?api-version=2.0
+2025-08-14T16:06:45.5671566Z ::add-mask::***
+2025-08-14T16:06:45.5676444Z ##[debug]Actor: trad-alrowais
+2025-08-14T16:06:45.5678003Z ##[debug]Action ID: deployment
+2025-08-14T16:06:45.5679717Z ##[debug]Actions Workflow Run ID: 16960479670
+2025-08-14T16:06:45.5680934Z Fetching artifact metadata for "github-pages" in this workflow run
+2025-08-14T16:06:45.5695736Z ##[debug]Workflow Run Backend ID: 107b6314-b6b0-4ead-97e6-554abd360ae8
+2025-08-14T16:06:45.5698698Z ##[debug]Workflow Job Run Backend ID: 5c8a90c1-a6cd-5be3-a441-24b085d4f447
+2025-08-14T16:06:45.5703968Z ##[debug][Request] ListArtifacts https://results-receiver.actions.githubusercontent.com/twirp/github.actions.results.api.v1.ArtifactService/ListArtifacts
+2025-08-14T16:06:45.6679663Z ##[debug][Response] - 200
+2025-08-14T16:06:45.6680964Z ##[debug]Headers: {
+2025-08-14T16:06:45.6681554Z ##[debug]  "content-length": "651",
+2025-08-14T16:06:45.6682240Z ##[debug]  "content-type": "application/json",
+2025-08-14T16:06:45.6682948Z ##[debug]  "date": "Thu, 14 Aug 2025 16:06:45 GMT",
+2025-08-14T16:06:45.6683673Z ##[debug]  "x-github-backend": "Kubernetes",
+2025-08-14T16:06:45.6684483Z ##[debug]  "x-github-request-id": "CBC4:21948F:33D607:3CE6E0:689E0995"
+2025-08-14T16:06:45.6685230Z ##[debug]}
+2025-08-14T16:06:45.6686150Z ##[debug]Body: {
+2025-08-14T16:06:45.6686720Z ##[debug]  "artifacts": [
+2025-08-14T16:06:45.6687245Z ##[debug]    {
+2025-08-14T16:06:45.6687923Z ##[debug]      "workflow_run_backend_id": "d4899d83-4016-498c-a889-e7baa80d9ea1",
+2025-08-14T16:06:45.6688967Z ##[debug]      "workflow_job_run_backend_id": "086ac512-8fee-58f7-b448-df2b5f19f12a",
+2025-08-14T16:06:45.6690550Z ##[debug]      "database_id": "3763087545",
+2025-08-14T16:06:45.6691195Z ##[debug]      "name": "github-pages",
+2025-08-14T16:06:45.6691807Z ##[debug]      "size": "1393",
+2025-08-14T16:06:45.6692405Z ##[debug]      "created_at": "2025-08-14T08:51:12Z",
+2025-08-14T16:06:45.6693351Z ##[debug]      "digest": "sha256:37ba79a4fa0f62e9ee5503f444d8e04529a4e609eb6d4490c70b9f6b3e494f2d"
+2025-08-14T16:06:45.6694282Z ##[debug]    },
+2025-08-14T16:06:45.6694751Z ##[debug]    {
+2025-08-14T16:06:45.6695414Z ##[debug]      "workflow_run_backend_id": "107b6314-b6b0-4ead-97e6-554abd360ae8",
+2025-08-14T16:06:45.6696385Z ##[debug]      "workflow_job_run_backend_id": "5c8a90c1-a6cd-5be3-a441-24b085d4f447",
+2025-08-14T16:06:45.6697539Z ##[debug]      "database_id": "3766816159",
+2025-08-14T16:06:45.6698153Z ##[debug]      "name": "github-pages",
+2025-08-14T16:06:45.6698754Z ##[debug]      "size": "1393",
+2025-08-14T16:06:45.6699555Z ##[debug]      "created_at": "2025-08-14T16:06:45Z",
+2025-08-14T16:06:45.6700553Z ##[debug]      "digest": "sha256:c20376a8e5ca27ccbafe22fb79be32b81f3a5c3bc9c313ab30e163c39f87a396"
+2025-08-14T16:06:45.6701490Z ##[debug]    }
+2025-08-14T16:06:45.6701930Z ##[debug]  ]
+2025-08-14T16:06:45.6702376Z ##[debug]}
+2025-08-14T16:06:45.6702893Z Found 2 artifact(s)
+2025-08-14T16:06:45.6703769Z ##[debug]List artifact count: 2
+2025-08-14T16:06:45.6723145Z ##[error]Fetching artifact metadata failed. Is githubstatus.com reporting issues with API requests, Pages, or Actions? Please re-run the deployment at a later time.
+2025-08-14T16:06:45.8578543Z ##[error]Error: Multiple artifacts named "github-pages" were unexpectedly found for this workflow run. Artifact count is 2.
+    at getArtifactMetadata (/home/runner/work/_actions/actions/deploy-pages/v4/src/internal/api-client.js:89:1)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Deployment.create (/home/runner/work/_actions/actions/deploy-pages/v4/src/internal/deployment.js:66:1)
+    at main (/home/runner/work/_actions/actions/deploy-pages/v4/src/index.js:30:1)
+2025-08-14T16:06:45.8585392Z ##[error]Error: Multiple artifacts named "github-pages" were unexpectedly found for this workflow run. Artifact count is 2.
+2025-08-14T16:06:45.8695797Z ##[debug]Node Action run completed with exit code 1
+2025-08-14T16:06:45.8727016Z ##[debug]Finishing: Deploy to GitHub Pages

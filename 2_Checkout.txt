@@ -1,0 +1,179 @@
+﻿2025-08-14T16:06:43.8007154Z ##[debug]Evaluating condition for step: 'Checkout'
+2025-08-14T16:06:43.8060693Z ##[debug]Evaluating: success()
+2025-08-14T16:06:43.8068944Z ##[debug]Evaluating success:
+2025-08-14T16:06:43.8093654Z ##[debug]=> true
+2025-08-14T16:06:43.8104728Z ##[debug]Result: true
+2025-08-14T16:06:43.8134220Z ##[debug]Starting: Checkout
+2025-08-14T16:06:43.8227300Z ##[debug]Register post job cleanup for action: actions/checkout@v4
+2025-08-14T16:06:43.8332025Z ##[debug]Loading inputs
+2025-08-14T16:06:43.8345197Z ##[debug]Evaluating: github.repository
+2025-08-14T16:06:43.8347705Z ##[debug]Evaluating Index:
+2025-08-14T16:06:43.8352367Z ##[debug]..Evaluating github:
+2025-08-14T16:06:43.8354952Z ##[debug]..=> Object
+2025-08-14T16:06:43.8363923Z ##[debug]..Evaluating String:
+2025-08-14T16:06:43.8366014Z ##[debug]..=> 'repository'
+2025-08-14T16:06:43.8374072Z ##[debug]=> 'trad-alrowais/my-arabic-blog'
+2025-08-14T16:06:43.8377607Z ##[debug]Result: 'trad-alrowais/my-arabic-blog'
+2025-08-14T16:06:43.8385848Z ##[debug]Evaluating: github.token
+2025-08-14T16:06:43.8387631Z ##[debug]Evaluating Index:
+2025-08-14T16:06:43.8389500Z ##[debug]..Evaluating github:
+2025-08-14T16:06:43.8391080Z ##[debug]..=> Object
+2025-08-14T16:06:43.8392503Z ##[debug]..Evaluating String:
+2025-08-14T16:06:43.8394106Z ##[debug]..=> 'token'
+2025-08-14T16:06:43.8396368Z ##[debug]=> '***'
+2025-08-14T16:06:43.8398233Z ##[debug]Result: '***'
+2025-08-14T16:06:43.8429454Z ##[debug]Loading env
+2025-08-14T16:06:43.8508953Z ##[group]Run actions/checkout@v4
+2025-08-14T16:06:43.8510313Z with:
+2025-08-14T16:06:43.8511106Z   repository: trad-alrowais/my-arabic-blog
+2025-08-14T16:06:43.8512410Z   token: ***
+2025-08-14T16:06:43.8513157Z   ssh-strict: true
+2025-08-14T16:06:43.8513900Z   ssh-user: git
+2025-08-14T16:06:43.8514658Z   persist-credentials: true
+2025-08-14T16:06:43.8515509Z   clean: true
+2025-08-14T16:06:43.8516299Z   sparse-checkout-cone-mode: true
+2025-08-14T16:06:43.8517221Z   fetch-depth: 1
+2025-08-14T16:06:43.8517981Z   fetch-tags: false
+2025-08-14T16:06:43.8518739Z   show-progress: true
+2025-08-14T16:06:43.8519774Z   lfs: false
+2025-08-14T16:06:43.8520492Z   submodules: false
+2025-08-14T16:06:43.8521271Z   set-safe-directory: true
+2025-08-14T16:06:43.8522779Z ##[endgroup]
+2025-08-14T16:06:43.9566285Z ##[debug]GITHUB_WORKSPACE = '/home/runner/work/my-arabic-blog/my-arabic-blog'
+2025-08-14T16:06:43.9569930Z ##[debug]qualified repository = 'trad-alrowais/my-arabic-blog'
+2025-08-14T16:06:43.9572794Z ##[debug]ref = 'refs/heads/main'
+2025-08-14T16:06:43.9574763Z ##[debug]commit = '5e8ea350377ccb17f468fb52e4023468f8323cee'
+2025-08-14T16:06:43.9576448Z ##[debug]clean = true
+2025-08-14T16:06:43.9577707Z ##[debug]filter = undefined
+2025-08-14T16:06:43.9579027Z ##[debug]fetch depth = 1
+2025-08-14T16:06:43.9580586Z ##[debug]fetch tags = false
+2025-08-14T16:06:43.9581938Z ##[debug]show progress = true
+2025-08-14T16:06:43.9583298Z ##[debug]lfs = false
+2025-08-14T16:06:43.9584555Z ##[debug]submodules = false
+2025-08-14T16:06:43.9585931Z ##[debug]recursive submodules = false
+2025-08-14T16:06:43.9587387Z ##[debug]GitHub Host URL = 
+2025-08-14T16:06:43.9589785Z ::add-matcher::/home/runner/work/_actions/actions/checkout/v4/dist/problem-matcher.json
+2025-08-14T16:06:43.9673241Z ##[debug]Added matchers: 'checkout-git'. Problem matchers scan action output for known warning or error strings and report these inline.
+2025-08-14T16:06:43.9679941Z Syncing repository: trad-alrowais/my-arabic-blog
+2025-08-14T16:06:43.9682111Z ::group::Getting Git version info
+2025-08-14T16:06:43.9683751Z ##[group]Getting Git version info
+2025-08-14T16:06:43.9685984Z Working directory is '/home/runner/work/my-arabic-blog/my-arabic-blog'
+2025-08-14T16:06:43.9688646Z ##[debug]Getting git version
+2025-08-14T16:06:43.9690038Z [command]/usr/bin/git version
+2025-08-14T16:06:43.9691115Z git version 2.50.1
+2025-08-14T16:06:43.9708809Z ##[debug]0
+2025-08-14T16:06:43.9711235Z ##[debug]git version 2.50.1
+2025-08-14T16:06:43.9712674Z ##[debug]
+2025-08-14T16:06:43.9715459Z ##[debug]Set git useragent to: git/2.50.1 (github-actions-checkout)
+2025-08-14T16:06:43.9717821Z ::endgroup::
+2025-08-14T16:06:43.9718705Z ##[endgroup]
+2025-08-14T16:06:43.9724453Z ::add-mask::***
+2025-08-14T16:06:43.9735797Z Temporarily overriding HOME='/home/runner/work/_temp/5cae2e6c-5bc1-4ec8-909b-5f9429023d42' before making global git config changes
+2025-08-14T16:06:43.9738879Z Adding repository directory to the temporary git global config as a safe directory
+2025-08-14T16:06:43.9742484Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/my-arabic-blog/my-arabic-blog
+2025-08-14T16:06:43.9771085Z ##[debug]0
+2025-08-14T16:06:43.9773268Z ##[debug]
+2025-08-14T16:06:43.9775614Z Deleting the contents of '/home/runner/work/my-arabic-blog/my-arabic-blog'
+2025-08-14T16:06:43.9779946Z ::group::Initializing the repository
+2025-08-14T16:06:43.9781178Z ##[group]Initializing the repository
+2025-08-14T16:06:43.9784196Z [command]/usr/bin/git init /home/runner/work/my-arabic-blog/my-arabic-blog
+2025-08-14T16:06:43.9848948Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-08-14T16:06:43.9852277Z hint: is subject to change. To configure the initial branch name to use in all
+2025-08-14T16:06:43.9854193Z hint: of your new repositories, which will suppress this warning, call:
+2025-08-14T16:06:43.9855602Z hint:
+2025-08-14T16:06:43.9856833Z hint: 	git config --global init.defaultBranch <name>
+2025-08-14T16:06:43.9858436Z hint:
+2025-08-14T16:06:43.9859905Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-08-14T16:06:43.9861775Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-08-14T16:06:43.9863616Z hint:
+2025-08-14T16:06:43.9864448Z hint: 	git branch -m <name>
+2025-08-14T16:06:43.9865383Z hint:
+2025-08-14T16:06:43.9866532Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-08-14T16:06:43.9868635Z Initialized empty Git repository in /home/runner/work/my-arabic-blog/my-arabic-blog/.git/
+2025-08-14T16:06:43.9871112Z ##[debug]0
+2025-08-14T16:06:43.9873143Z ##[debug]Initialized empty Git repository in /home/runner/work/my-arabic-blog/my-arabic-blog/.git/
+2025-08-14T16:06:43.9874772Z ##[debug]
+2025-08-14T16:06:43.9876073Z [command]/usr/bin/git remote add origin https://github.com/trad-alrowais/my-arabic-blog
+2025-08-14T16:06:43.9896852Z ##[debug]0
+2025-08-14T16:06:43.9898269Z ##[debug]
+2025-08-14T16:06:43.9900157Z ::endgroup::
+2025-08-14T16:06:43.9901255Z ##[endgroup]
+2025-08-14T16:06:43.9902863Z ::group::Disabling automatic garbage collection
+2025-08-14T16:06:43.9904070Z ##[group]Disabling automatic garbage collection
+2025-08-14T16:06:43.9905420Z [command]/usr/bin/git config --local gc.auto 0
+2025-08-14T16:06:43.9933562Z ##[debug]0
+2025-08-14T16:06:43.9934938Z ##[debug]
+2025-08-14T16:06:43.9936278Z ::endgroup::
+2025-08-14T16:06:43.9937032Z ##[endgroup]
+2025-08-14T16:06:43.9938413Z ::group::Setting up auth
+2025-08-14T16:06:43.9939610Z ##[group]Setting up auth
+2025-08-14T16:06:43.9941390Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-08-14T16:06:43.9966729Z ##[debug]1
+2025-08-14T16:06:43.9968051Z ##[debug]
+2025-08-14T16:06:43.9972633Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-08-14T16:06:44.0245692Z ##[debug]0
+2025-08-14T16:06:44.0250889Z ##[debug]
+2025-08-14T16:06:44.0252658Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-08-14T16:06:44.0278213Z ##[debug]1
+2025-08-14T16:06:44.0280172Z ##[debug]
+2025-08-14T16:06:44.0284616Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-08-14T16:06:44.0503300Z ##[debug]0
+2025-08-14T16:06:44.0504772Z ##[debug]
+2025-08-14T16:06:44.0511851Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-08-14T16:06:44.0547114Z ##[debug]0
+2025-08-14T16:06:44.0549581Z ##[debug]
+2025-08-14T16:06:44.0556108Z ::endgroup::
+2025-08-14T16:06:44.0557505Z ##[endgroup]
+2025-08-14T16:06:44.0560322Z ::group::Fetching the repository
+2025-08-14T16:06:44.0562097Z ##[group]Fetching the repository
+2025-08-14T16:06:44.0568511Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +5e8ea350377ccb17f468fb52e4023468f8323cee:refs/remotes/origin/main
+2025-08-14T16:06:44.2362042Z From https://github.com/trad-alrowais/my-arabic-blog
+2025-08-14T16:06:44.2365256Z  * [new ref]         5e8ea350377ccb17f468fb52e4023468f8323cee -> origin/main
+2025-08-14T16:06:44.2394149Z ##[debug]0
+2025-08-14T16:06:44.2396396Z ##[debug]
+2025-08-14T16:06:44.2398398Z ::endgroup::
+2025-08-14T16:06:44.2399812Z ##[endgroup]
+2025-08-14T16:06:44.2401593Z ::group::Determining the checkout info
+2025-08-14T16:06:44.2402847Z ##[group]Determining the checkout info
+2025-08-14T16:06:44.2405308Z ::endgroup::
+2025-08-14T16:06:44.2406578Z ##[endgroup]
+2025-08-14T16:06:44.2407619Z [command]/usr/bin/git sparse-checkout disable
+2025-08-14T16:06:44.2441842Z ##[debug]0
+2025-08-14T16:06:44.2443885Z ##[debug]
+2025-08-14T16:06:44.2447809Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-08-14T16:06:44.2478289Z ##[debug]0
+2025-08-14T16:06:44.2480855Z ##[debug]
+2025-08-14T16:06:44.2482379Z ::group::Checking out the ref
+2025-08-14T16:06:44.2483838Z ##[group]Checking out the ref
+2025-08-14T16:06:44.2486312Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-08-14T16:06:44.2528758Z Switched to a new branch 'main'
+2025-08-14T16:06:44.2531581Z branch 'main' set up to track 'origin/main'.
+2025-08-14T16:06:44.2537764Z ##[debug]0
+2025-08-14T16:06:44.2540760Z ##[debug]branch 'main' set up to track 'origin/main'.
+2025-08-14T16:06:44.2542674Z ##[debug]
+2025-08-14T16:06:44.2544218Z ::endgroup::
+2025-08-14T16:06:44.2544967Z ##[endgroup]
+2025-08-14T16:06:44.2574695Z ##[debug]0
+2025-08-14T16:06:44.2577344Z ##[debug]commit 5e8ea350377ccb17f468fb52e4023468f8323cee
+2025-08-14T16:06:44.2580090Z ##[debug]Author: Teras Alrowes <tradalrowais@gmail.com>
+2025-08-14T16:06:44.2582131Z ##[debug]Date:   Thu Aug 14 11:50:12 2025 +0300
+2025-08-14T16:06:44.2583821Z ##[debug]
+2025-08-14T16:06:44.2585034Z ##[debug]    Update HTML.sitemap.xml.robots.txt
+2025-08-14T16:06:44.2586153Z ##[debug]    
+2025-08-14T16:06:44.2587226Z ##[debug]    Signed-off-by: Teras Alrowes <tradalrowais@gmail.com>
+2025-08-14T16:06:44.2588509Z ##[debug]
+2025-08-14T16:06:44.2589712Z [command]/usr/bin/git log -1 --format=%H
+2025-08-14T16:06:44.2606154Z 5e8ea350377ccb17f468fb52e4023468f8323cee
+2025-08-14T16:06:44.2612427Z ##[debug]0
+2025-08-14T16:06:44.2614822Z ##[debug]5e8ea350377ccb17f468fb52e4023468f8323cee
+2025-08-14T16:06:44.2616971Z ##[debug]
+2025-08-14T16:06:44.2619939Z ##[debug]Unsetting HOME override
+2025-08-14T16:06:44.2627908Z ::remove-matcher owner=checkout-git::
+2025-08-14T16:06:44.2643787Z ##[debug]Removed matchers: 'checkout-git'
+2025-08-14T16:06:44.2699673Z ##[debug]Node Action run completed with exit code 0
+2025-08-14T16:06:44.2736185Z ##[debug]Save intra-action state isPost = true
+2025-08-14T16:06:44.2737618Z ##[debug]Save intra-action state setSafeDirectory = true
+2025-08-14T16:06:44.2739716Z ##[debug]Save intra-action state repositoryPath = /home/runner/work/my-arabic-blog/my-arabic-blog
+2025-08-14T16:06:44.2745232Z ##[debug]Set output commit = 5e8ea350377ccb17f468fb52e4023468f8323cee
+2025-08-14T16:06:44.2746990Z ##[debug]Set output ref = refs/heads/main
+2025-08-14T16:06:44.2753972Z ##[debug]Finishing: Checkout
